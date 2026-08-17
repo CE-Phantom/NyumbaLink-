@@ -1,0 +1,255 @@
+/* =========================================
+   NYUMBALINK v2.0
+   REGISTRATION ROLE SELECTION
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f8fb;
+    color: #172033;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.register-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 45px 20px 25px;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(37, 168, 68, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(16, 43, 97, 0.08),
+            transparent 30%
+        ),
+        #f6f8fb;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: #102b61;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    margin-bottom: 55px;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.register-container {
+    width: min(720px, 100%);
+
+    text-align: center;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.register-heading {
+    margin-bottom: 35px;
+}
+
+.register-label {
+    display: inline-block;
+
+    color: #25a844;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.register-heading h1 {
+    color: #102b61;
+
+    font-size: clamp(32px, 5vw, 46px);
+
+    line-height: 1.15;
+
+    margin-bottom: 12px;
+}
+
+.register-heading p {
+    color: #687386;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   ROLE GRID
+========================================= */
+
+.role-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   ROLE CARD
+========================================= */
+
+.role-card {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 245px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    border: 1px solid #dfe5ed;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.role-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 168, 68, 0.06);
+
+    right: -45px;
+    bottom: -45px;
+
+    transition: transform 0.3s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #25a844;
+
+    box-shadow:
+        0 15px 35px rgba(16, 43, 97, 0.10);
+}
+
+.role-card:hover::after {
+    transform: scale(1.4);
+}
+
+
+/* =========================================
+   ROLE ICON
+========================================= */
+
+.role-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eaf8ee;
+
+    font-size: 29px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   ROLE CONTENT
+========================================= */
+
+.role-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding
